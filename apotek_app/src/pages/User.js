@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 import { View, Text } from 'react-native';
 
-import Routes from './src/Routes'
-
-class App extends Component {
+class User extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -12,9 +10,11 @@ class App extends Component {
 
   render() {
     return (
-      <Routes />
+      <View>
+        <Text> User </Text>
+      </View>
     );
   }
 }
 
-export default App;
+export default User;
