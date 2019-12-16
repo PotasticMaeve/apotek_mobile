@@ -1,9 +1,8 @@
 /**
- * Sample React Native App
- * https://github.com/facebook/react-native
+ * Simple Apotek App
+ * https://github.com/accalina
  *
- * @format
- * @flow
+ * @Author Accalina
  */
 
 import React from 'react';
@@ -11,18 +10,14 @@ import {
   SafeAreaView,
   StyleSheet,
   ScrollView,
+  TouchableOpacity,
   View,
   Text,
   StatusBar,
+  Image,
 } from 'react-native';
 
-import {
-  Header,
-  LearnMoreLinks,
-  Colors,
-  DebugInstructions,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
+import { Colors } from 'react-native/Libraries/NewAppScreen';
 
 const App: () => React$Node = () => {
   return (
@@ -32,39 +27,32 @@ const App: () => React$Node = () => {
         <ScrollView
           contentInsetAdjustmentBehavior="automatic"
           style={styles.scrollView}>
-          <Header />
-          {global.HermesInternal == null ? null : (
-            <View style={styles.engine}>
-              <Text style={styles.footer}>Engine: Hermes</Text>
-            </View>
-          )}
+
+          <Image
+            source  = {{ uri: "https://avatars0.githubusercontent.com/u/25729519?s=400&v=4" }}
+            style   = {{ width: 200, height: 200, marginHorizontal: 100}}
+          />
+
+
           <View style={styles.body}>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Step One</Text>
+
+            <TouchableOpacity style={styles.sectionContainer}>
+              <Text style={styles.sectionTitle}>Supplier Menu</Text>
               <Text style={styles.sectionDescription}>
-                Edit <Text style={styles.highlight}>App.js</Text> to change this
-                screen and then come back to see your edits.
+                <Text style={styles.highlight}>Manage Supplier Data</Text>.
+                Create, Read, Update, and Delete supplier data.
               </Text>
-            </View>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>See Your Changes</Text>
+            </TouchableOpacity>
+
+            <TouchableOpacity style={styles.sectionContainer}>
+              <Text style={styles.sectionTitle}>User Menu</Text>
               <Text style={styles.sectionDescription}>
-                <ReloadInstructions />
+                <Text style={styles.highlight}>Manage User Data</Text>. Useful for authentication and authorization. able to
+                Create, Read, Update, and Delete user data.
               </Text>
-            </View>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Debug</Text>
-              <Text style={styles.sectionDescription}>
-                <DebugInstructions />
-              </Text>
-            </View>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Learn More</Text>
-              <Text style={styles.sectionDescription}>
-                Read the docs to discover what to do next:
-              </Text>
-            </View>
-            <LearnMoreLinks />
+            </TouchableOpacity>
+
+            
           </View>
         </ScrollView>
       </SafeAreaView>
