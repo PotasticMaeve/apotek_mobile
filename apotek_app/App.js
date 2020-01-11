@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { View, Text } from 'react-native';
-
+import { BackHandler, Alert } from 'react-native';
+import { Actions } from 'react-native-router-flux'
 import Routes from './src/Routes'
 
 class App extends Component {
@@ -8,6 +8,16 @@ class App extends Component {
     super(props);
     this.state = {
     };
+  }
+
+  componentDidMount(){
+    BackHandler.addEventListener('hardwareBackPress', this.handleBackButton.bind(this))
+  }
+
+  handleBackButton(){
+    if (Actions.currentScene == "menu"){
+      BackHandler.exitApp()
+    }
   }
 
   render() {

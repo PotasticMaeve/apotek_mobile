@@ -18,7 +18,7 @@ class User extends Component {
   }
 
   getData(){
-    return fetch('http://192.168.1.105:8080/user')
+    return fetch('http://68.183.190.242:1281/user')
       .then((response) => response.json() )
       .then(json => {
           this.setState({users: json.data })

@@ -18,7 +18,7 @@ class Supplier extends Component {
   }
 
   getData(){
-      return fetch('http://192.168.1.105:8080/supplier')
+      return fetch('http://68.183.190.242:1281/supplier')
         .then((response) => response.json() )
         .then(json => {
             this.setState({suppliers: json.data })
