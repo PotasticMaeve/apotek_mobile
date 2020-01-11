@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BackHandler, Alert } from 'react-native';
+import { BackHandler, StatusBar, View } from 'react-native';
 import { Actions } from 'react-native-router-flux'
 import Routes from './src/Routes'
 
@@ -22,7 +22,11 @@ class App extends Component {
 
   render() {
     return (
-      <Routes />
+      <View style={{flex: 1}}>
+        <StatusBar backgroundColor={"#c7ecee"} barStyle="dark-content"/>
+        <Routes/>
+      </View>
+
     );
   }
 }

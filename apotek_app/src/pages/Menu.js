@@ -6,9 +6,11 @@ import {
     View,
     Text,
     Image,
+    StatusBar
 } from 'react-native';
 
 import style from '../stylesheets/main_style'
+import Navbar from '../Navbar'
 
 class Menu extends Component {
   constructor(props) {
@@ -20,10 +22,11 @@ class Menu extends Component {
   render() {
     return (
       
-        <ScrollView style={style.mainBody}>
+      <ScrollView style={style.mainBody}>
+        <Navbar/>
           <Image
           source  = {{ uri: "https://avatars0.githubusercontent.com/u/25729519?s=400&v=4" }}
-          style   = {{ width: 200, height: 200, marginHorizontal: 100}}
+          style   = {{ width: 200, height: 200, marginHorizontal: 100,margin: 20}}
         />
 
           <TouchableOpacity style={style.sectionBox} onPress={ ()=> Actions.supplier() }>
@@ -40,7 +43,7 @@ class Menu extends Component {
             </View>
           </TouchableOpacity>
                 
-      </ScrollView>
+        </ScrollView>
     );
   }
 }

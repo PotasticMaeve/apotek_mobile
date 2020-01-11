@@ -1,6 +1,8 @@
 import React from 'react';
-import { Router, Scene } from 'react-native-router-flux';
+import { Router, Scene, Drawer } from 'react-native-router-flux';
 
+
+import Sidemenu from './Sidemenu'
 import Menu from './pages/Menu';
 import Supplier from './pages/Supplier';
 import User from './pages/User';
@@ -8,9 +10,18 @@ import User from './pages/User';
 const Routes = () => (
     <Router>
         <Scene key="root">
-            <Scene key="menu" component={Menu} title="Main Menu" initial={true} />
-            <Scene key="supplier" component={Supplier} title="Supplier Data" />
-            <Scene key="user" component={User} title="User Data" />
+
+            <Drawer
+                hideNavBar={true}
+                key="drawerMenu"
+                contentComponent={Sidemenu}
+                drawerPosition="left"
+            >
+                <Scene hideNavBar={true} key="menu" component={Menu} title="Main Menu" />
+                <Scene key="supplier" component={Supplier} title="Supplier Data" />
+                <Scene key="user" component={User} title="User Data" />
+            </Drawer>
+
         </Scene>
     </Router>
 )
