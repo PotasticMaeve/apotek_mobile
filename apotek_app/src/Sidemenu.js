@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, Image } from 'react-native';
+import { red } from 'ansi-colors';
 
 class Sidemenu extends Component {
   constructor(props) {
@@ -10,8 +11,12 @@ class Sidemenu extends Component {
 
   render() {
     return (
-      <View>
+      <View style={{ flex:1, backgroundColor: "red" }}>
         <Text> Sidemenu </Text>
+        <Image
+            source  = {{ uri: "https://avatars0.githubusercontent.com/u/25729519?s=400&v=4" }}
+            style   = {{ width: 200, height: 200, marginHorizontal: 100,margin: 20}}
+          />
       </View>
     );
   }

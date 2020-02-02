@@ -67,8 +67,23 @@ const style = StyleSheet.create({
       fontWeight: '400',
       color: "#636e72",
     },
+    // ///////////////////////////////////////////
 
+    cardMenu: {
+      width: "100%",
+      height: "auto",
+      backgroundColor: "#fff",
+      marginBottom: 25,
+      borderRadius: 20,
+      elevation: 4,
+      padding: 10,
+      paddingBottom: 15,
+      flexDirection: "row",
+      justifyContent: 'space-between',
+    }
   
+
+
   })
 
 export default style

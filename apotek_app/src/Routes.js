@@ -10,18 +10,18 @@ import User from './pages/User';
 const Routes = () => (
     <Router>
         <Scene key="root">
-
-            <Drawer
+            {/* <Drawer
                 hideNavBar={true}
-                key="drawerMenu"
-                contentComponent={Sidemenu}
-                drawerPosition="left"
-            >
+                key="sidemenu"
+                Component={Sidemenu}
+                drawerPosition="right"
+            > */}
+            {/* </Drawer> */}
+            
                 <Scene hideNavBar={true} key="menu" component={Menu} title="Main Menu" />
                 <Scene key="supplier" component={Supplier} title="Supplier Data" />
                 <Scene key="user" component={User} title="User Data" />
-            </Drawer>
-
+            
         </Scene>
     </Router>
 )
